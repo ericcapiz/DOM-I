@@ -78,9 +78,20 @@ mainH4[4].textContent= siteContent['main-content']['vision-h4'];
 let mainImg = document.getElementById('middle-img');
 mainImg.setAttribute('src', siteContent[`main-content`][`middle-img-src`]);
 
-let mainP = document.querySelectorAll('p');
+let mainP = document.querySelectorAll('.main-content p');
 mainP[0].textContent = siteContent['main-content']['features-content'];
 mainP[1].textContent = siteContent['main-content']['about-content'];
 mainP[2].textContent = siteContent['main-content']['services-content'];
 mainP[3].textContent = siteContent['main-content']['product-content'];
 mainP[4].textContent = siteContent['main-content']['vision-content'];
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.textContent= siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent=siteContent['contact']['address'];
+contactP[1].textContent=siteContent['contact']['phone'];
+contactP[2].textContent=siteContent['contact']['email'];
+
+let foot = document.querySelector('footer p');
+foot.textContent= siteContent['footer']['copyright'];
