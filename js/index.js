@@ -41,23 +41,33 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.querySelector('nav');
+let nav = document.querySelectorAll('a');
 
-let links = nav.querySelectorAll('a');
-links[0].textContent=siteContent ['nav']['nav-item-1'];
-links[1].textContent=siteContent ['nav']['nav-item-2'];
-links[2].textContent=siteContent ['nav']['nav-item-3'];
-links[3].textContent=siteContent ['nav']['nav-item-4'];
-links[4].textContent=siteContent ['nav']['nav-item-5'];
-links[5].textContent=siteContent ['nav']['nav-item-6'];
 
-nav.append('Append');
-nav.prepend('Prepend');
+nav[0].textContent=siteContent ['nav']['nav-item-1'];
+nav[1].textContent=siteContent ['nav']['nav-item-2'];
+nav[2].textContent=siteContent ['nav']['nav-item-3'];
+nav[3].textContent=siteContent ['nav']['nav-item-4'];
+nav[4].textContent=siteContent ['nav']['nav-item-5'];
+nav[5].textContent=siteContent ['nav']['nav-item-6'];
 
-links.forEach(link);
-function link(links){
-  links.style.color="green";
-}
+nav.forEach(a => {
+  a.style.color = "green";
+});
+
+let newLink = document.getElementsByTagName('nav');
+
+let newNav1 = document.createElement('a');
+newNav1.textContent = "Log-In";
+newNav1.style.color="green";
+newLink[0].appendChild(newNav1);
+
+let newNav2 = document.createElement('a');
+newNav2.textContent = "Sign-Up";
+newNav2.style.color="green";
+newLink[0].prepend(newNav2);
+
+
 
 let ctaH1 = document.querySelector('h1');
 ctaH1.textContent= siteContent['cta']['h1'];
